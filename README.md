@@ -59,7 +59,7 @@ Set your username and password (foo by default) data:
 
 You can obtain your password encoded with the following code:
 
-php -r "require_once __DIR__.'/vendor/autoload.php'; echo (new \Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder())->encodePassword('foo', '');echo \"\n\";"
+    php -r "require_once __DIR__.'/vendor/autoload.php'; echo (new \Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder())->encodePassword('foo', '');echo \"\n\";"
 
 You need to set the url of the resources folder.
 
