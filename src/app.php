@@ -26,11 +26,11 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'dbs.options' => array(
             'db' => array(
                 'driver'   => 'pdo_mysql',
-                'dbname'   => 'DATABASE_NAME',
-                'host'     => '127.0.0.1',
-                'user'     => 'DATABASE_USER',
-                'password' => 'DATABASE_PASS',
-                'charset'  => 'utf8',
+                'dbname'   => 'crudfut',
+                'host'     => 'mysql',
+                'user'     => 'crudfut',
+                'password' => 'crud-olivier-peva',
+                'charset'  => 'UTF8',
             ),
         )
 ));
@@ -48,6 +48,7 @@ $app->register(new Silex\Provider\SecurityServiceProvider(), array(
             'logout' => array('logout_path' => $app['logout_path']),
             'users' => array(
                 'admin' => array('ROLE_ADMIN', '5FZ2Z8QIkA7UTZ4BYkoC+GsReLf569mSKDsfods6LYQ8t+a8EW9oaircfMpmaLbPBh4FOBiiFyLfuZmTSUwzZg=='),
+                'olivier' => array('ROLE_ADMIN', 'mhJhpj2/eBbnjaKQ5CM6yZzyMyrZOo08cEq/ZDTiQaEAuCypX8DaAyxUMc5Pk2HuqGpYoGuQMHRG6ateFD+1bw=='),
             ),
         ),
     )

@@ -10,9 +10,21 @@
  * file that was distributed with this source code.
  */
 
+
 require_once __DIR__.'/../../vendor/autoload.php';
 require_once __DIR__.'/../../src/app.php';
+use Symfony\Component\HttpFoundation\Request;
 
+require_once __DIR__.'/toto/index.php';
+
+
+$app->get($app['login_path'], function(Request $request) use ($app) {
+
+    return $app['twig']->render('login.html.twig', array(
+        'error'         => $app['security.last_error']($request),
+        'last_username' => $app['session']->get('_security.last_username'),
+    ));
+});
 
 $app->match('/', function () use ($app) {
 
